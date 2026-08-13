@@ -228,9 +228,13 @@ El archivo `external_evaluation.json` contiene además un smoke test de ocho eje
 | `GET` | `/metrics` | Expone métricas del artefacto activo |
 | `GET` | `/experiments` | Lista comparaciones y experimentos |
 | `GET` | `/ablation` | Devuelve el estudio de ablación |
+| `GET` | `/evaluation/holdout` | Devuelve el último informe y el estado de evaluación del benchmark retenido |
+| `POST` | `/evaluation/holdout` | Ejecuta de forma asíncrona una evaluación segura del modelo promovido |
 | `GET` | `/health` | Comprueba disponibilidad |
 
 La respuesta de predicción incluye la etiqueta, `confidence_score`, probabilidad estadística, umbral, fuente de decisión, entidades, conflictos, explicación, `verification_status` y evidencia fuerte si existe. Los estados son `SUPPORTED`, `REFUTED`, `INSUFFICIENT_EVIDENCE`, `ONTOLOGY_CONFLICT` y `ONTOLOGY_SUPPORT`.
+
+La pantalla de experimentos exporta métricas como JSON directamente desde los datos recuperados y permite iniciar solamente la evaluación del artefacto promovido contra el benchmark retenido. El servidor no acepta rutas, comandos ni nombres de experimento desde el navegador. Mientras la evaluación se ejecuta, la interfaz consulta su estado; al terminar muestra el informe actualizado. El historial también se puede exportar como CSV.
 
 El frontend profesional está en `frontend/` e implementa tres vistas: analizador, historial y experimentos. Usa Next.js App Router, TypeScript, Tailwind, Lucide y Recharts. CORS admite orígenes locales `localhost`/`127.0.0.1` para su comunicación con FastAPI.
 
@@ -258,6 +262,25 @@ npm run dev
 ```
 
 La aplicación queda disponible en `http://localhost:3000` y la documentación interactiva de FastAPI en `http://localhost:8000/docs`.
+
+### Esquema y datos reproducibles
+
+El esquema PostgreSQL versionado está en `docs/schema.sql`. Para restaurar una base vacía:
+
+```bash
+createdb fakenews-clima
+psql -d fakenews-clima -f docs/schema.sql
+```
+
+Para generar un volcado de los datos de entrenamiento y evidencia de la base local actual, sin el historial operativo de usuarios:
+
+```bash
+export DATABASE_URL='postgresql://postgres:postgres@localhost:5432/fakenews-clima'
+python scripts/export_database_dump.py
+psql -d fakenews-clima -f docs/database_data.sql
+```
+
+El historial solo se incluye de forma explícita con `--include-history`, tras revisar que no contiene textos que no deban compartirse.
 
 ## 11. Limitaciones, riesgos y mejora prioritaria
 

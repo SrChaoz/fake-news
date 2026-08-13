@@ -52,6 +52,30 @@ export DATABASE_URL='postgresql://postgres:postgres@localhost:5432/fakenews-clim
 python init_db.py
 ```
 
+### Database schema and reproducible training data
+
+The repository includes a PostgreSQL snapshot intended to reproduce the data layer used by the project:
+
+- [Schema](docs/schema.sql): tables, constraints, relationships, JSONB fields, and indexes.
+- [Training and evidence data](docs/database_data.sql): current `dataset_records` and `dataset_evidence` contents.
+
+Restore a clean database with:
+
+```bash
+createdb fakenews-clima
+psql -d fakenews-clima -f docs/schema.sql
+psql -d fakenews-clima -f docs/database_data.sql
+```
+
+The data dump intentionally excludes `prediction_history`, because it can contain texts submitted by users during local tests. To regenerate the training/evidence dump from your current database:
+
+```bash
+export DATABASE_URL='postgresql://postgres:postgres@localhost:5432/fakenews-clima'
+python scripts/export_database_dump.py
+```
+
+Use `python scripts/export_database_dump.py --include-history` only after reviewing the history data before sharing it.
+
 ### 2. Start the API
 
 Create and activate a virtual environment, then install the backend dependencies.
@@ -93,6 +117,8 @@ Open [http://localhost:3000](http://localhost:3000). The default API URL is `htt
 | `GET` | `/metrics` | Returns the promoted model metrics. |
 | `GET` | `/ablation` | Returns ablation-study results. |
 | `GET` | `/experiments` | Returns registered experiment metadata. |
+| `GET` | `/evaluation/holdout` | Returns the latest promoted-model holdout evaluation and its status. |
+| `POST` | `/evaluation/holdout` | Starts a controlled holdout evaluation of the promoted model. |
 | `GET` | `/health` | Service health check. |
 
 Example:
@@ -120,6 +146,8 @@ Large downloaded datasets (`data/external/`, the enriched Climate-FEVER JSONL) a
 - [Technical report](docs/INFORME_TECNICO.md)
 - [Final project report](docs/INFORME_FINAL_PROYECTO.md)
 - [Experiments and algorithms](docs/EXPERIMENTOS_Y_ALGORITMOS.md)
+- [External comparison, requirements, and phases](docs/COMPARACION_REQUISITOS_Y_FASES.md)
+- [Database schema](docs/schema.sql) and [reproducible dataset/evidence dump](docs/database_data.sql)
 - [Extended system documentation](documentacion.md)
 - [Frontend guide](frontend/README.md)
 

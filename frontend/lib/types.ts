@@ -75,3 +75,30 @@ export interface ExperimentsResponse {
 }
 
 export type AblationResponse = Record<string, MetricSet>;
+
+export interface HoldoutEvaluationReport {
+  benchmark: string;
+  model_directory: string;
+  records: number;
+  class_counts: Record<PredictionLabel, number>;
+  metrics: {
+    accuracy: number;
+    balanced_accuracy: number;
+    macro_f1: number;
+    fake: Required<Pick<MetricSet, "precision" | "recall" | "f1_score">>;
+    real: Required<Pick<MetricSet, "precision" | "recall" | "f1_score">>;
+    confusion_matrix: number[][];
+  };
+  error_count: number;
+  warning?: string;
+}
+
+export interface HoldoutEvaluationResponse {
+  evaluation: {
+    status: "idle" | "running" | "completed" | "failed";
+    started_at: string | null;
+    finished_at: string | null;
+    error: string | null;
+  };
+  report: HoldoutEvaluationReport | null;
+}

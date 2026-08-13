@@ -61,6 +61,8 @@ La API permite CORS únicamente para los orígenes locales de desarrollo habitua
 | `GET /ablation` | Comparación del modelo completo con sus ablaciones. |
 | `GET /experiments` | Artefactos BERT, sistema ontológico y experimentos almacenados. |
 | `GET /health` | Estado de disponibilidad de la API. |
+| `GET /evaluation/holdout` | Estado y último informe del benchmark retenido del modelo promovido. |
+| `POST /evaluation/holdout` | Inicia una reevaluación asíncrona y limitada al modelo de producción. |
 
 Ejemplo de lote:
 

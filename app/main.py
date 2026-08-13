@@ -3,7 +3,11 @@
 from __future__ import annotations
 
 import json
+import subprocess
+import sys
+import threading
 from contextlib import asynccontextmanager
+from datetime import UTC, datetime
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Generator
@@ -25,8 +29,23 @@ from database import SessionLocal
 from models import PredictionHistory
 
 MODEL_DIRECTORY = Path(__file__).resolve().parent / "models"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+HOLDOUT_EVALUATION_PATH = MODEL_DIRECTORY / "holdout_evaluation.json"
+PROMOTED_HOLDOUT_REPORT_PATH = MODEL_DIRECTORY / "experiments" / "holdout_bert" / "holdout_evaluation.json"
 LOCAL_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:8080", "http://127.0.0.1:8080"]
 LOCAL_ORIGIN_REGEX = r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$"
+
+# La evaluación se inicia exclusivamente sobre el artefacto promocionado y el
+# benchmark retenido local. Nunca recibe comandos, rutas ni argumentos del
+# navegador. Así la UI puede pedir una evaluación sin convertirse en una vía
+# para ejecutar procesos arbitrarios en el servidor.
+_evaluation_lock = threading.Lock()
+_holdout_evaluation_state: dict[str, Any] = {
+    "status": "idle",
+    "started_at": None,
+    "finished_at": None,
+    "error": None,
+}
 
 
 @asynccontextmanager
@@ -228,6 +247,38 @@ def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.get("/evaluation/holdout")
+def holdout_evaluation() -> dict[str, Any]:
+    """Devuelve el estado y el último informe del benchmark retenido."""
+    try:
+        report = load_holdout_evaluation()
+    except RuntimeError as error:
+        raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail=str(error)) from error
+    with _evaluation_lock:
+        state = dict(_holdout_evaluation_state)
+    return {"evaluation": state, "report": report}
+
+
+@app.post("/evaluation/holdout", status_code=status.HTTP_202_ACCEPTED)
+def start_holdout_evaluation() -> dict[str, Any]:
+    """Inicia una evaluación asíncrona y segura del modelo actualmente promovido.
+
+    El endpoint no admite rutas ni nombres de experimento: siempre ejecuta el
+    benchmark retenido contra ``app/models`` para evitar ejecución arbitraria.
+    """
+    with _evaluation_lock:
+        if _holdout_evaluation_state["status"] == "running":
+            raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Ya hay una evaluación holdout en ejecución.")
+        _holdout_evaluation_state.update({
+            "status": "running",
+            "started_at": datetime.now(UTC).isoformat(),
+            "finished_at": None,
+            "error": None,
+        })
+    threading.Thread(target=_run_holdout_evaluation, name="holdout-evaluation", daemon=True).start()
+    return {"evaluation": dict(_holdout_evaluation_state), "message": "Evaluación iniciada; consulta GET /evaluation/holdout para ver el estado."}
+
+
 @app.post("/predict", response_model=PredictionResponse)
 def predict(request: PredictionRequest, db: Session = Depends(get_db)) -> PredictionResponse:
     """Analiza un texto y persiste el resultado en ``prediction_history``."""
@@ -237,6 +288,58 @@ def predict(request: PredictionRequest, db: Session = Depends(get_db)) -> Predic
         raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail=str(error)) from error
     persist_predictions(db, [request.text], [result])
     return result
+
+
+def load_holdout_evaluation() -> dict[str, Any] | None:
+    """Lee el último informe de holdout del modelo promovido si existe."""
+    try:
+        return json.loads(HOLDOUT_EVALUATION_PATH.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        # El artefacto se promovió desde holdout_bert. Antes de ejecutar una
+        # reevaluación desde la UI, se conserva su informe validado original.
+        try:
+            return json.loads(PROMOTED_HOLDOUT_REPORT_PATH.read_text(encoding="utf-8"))
+        except FileNotFoundError:
+            return None
+        except (OSError, ValueError) as error:
+            raise RuntimeError("El informe de evaluación holdout no es válido.") from error
+    except (OSError, ValueError) as error:
+        raise RuntimeError("El informe de evaluación holdout no es válido.") from error
+
+
+def _run_holdout_evaluation() -> None:
+    """Ejecuta el evaluador aislado y actualiza el estado visible por API."""
+    command = [
+        sys.executable,
+        str(PROJECT_ROOT / "scripts" / "evaluate_holdout.py"),
+        "--model-directory",
+        str(MODEL_DIRECTORY),
+        "--output",
+        str(HOLDOUT_EVALUATION_PATH),
+    ]
+    try:
+        completed = subprocess.run(
+            command,
+            cwd=PROJECT_ROOT,
+            capture_output=True,
+            text=True,
+            timeout=900,
+            check=False,
+        )
+        with _evaluation_lock:
+            _holdout_evaluation_state["finished_at"] = datetime.now(UTC).isoformat()
+            if completed.returncode == 0:
+                _holdout_evaluation_state.update({"status": "completed", "error": None})
+            else:
+                detail = (completed.stderr or completed.stdout or "El evaluador terminó con error.").strip()
+                _holdout_evaluation_state.update({"status": "failed", "error": detail[-1_500:]})
+    except (OSError, subprocess.SubprocessError) as error:
+        with _evaluation_lock:
+            _holdout_evaluation_state.update({
+                "status": "failed",
+                "finished_at": datetime.now(UTC).isoformat(),
+                "error": str(error),
+            })
 
 
 @app.post("/batch_predict", response_model=BatchPredictionResponse)

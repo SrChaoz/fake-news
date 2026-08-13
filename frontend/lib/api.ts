@@ -1,4 +1,4 @@
-import type { AblationResponse, ExperimentsResponse, HistoryItem, MetricsResponse, PredictionResponse } from "@/lib/types";
+import type { AblationResponse, ExperimentsResponse, HistoryItem, HoldoutEvaluationResponse, MetricsResponse, PredictionResponse } from "@/lib/types";
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000").replace(/\/$/, "");
 
@@ -33,5 +33,7 @@ export const api = {
   metrics: () => request<MetricsResponse>("/metrics"),
   experiments: () => request<ExperimentsResponse>("/experiments"),
   ablation: () => request<AblationResponse>("/ablation"),
+  holdoutEvaluation: () => request<HoldoutEvaluationResponse>("/evaluation/holdout"),
+  startHoldoutEvaluation: () => request<HoldoutEvaluationResponse>("/evaluation/holdout", { method: "POST" }),
   health: () => request<{ status: string }>("/health"),
 };
