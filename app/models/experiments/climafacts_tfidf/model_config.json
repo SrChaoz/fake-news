@@ -1,0 +1,15 @@
+{
+  "variant": "full_hybrid",
+  "symbolic_feature_order": [
+    "text_word_count",
+    "claim_word_count",
+    "claim_readability",
+    "linked_entity_count",
+    "has_conflict"
+  ],
+  "decision_threshold_real": 0.58,
+  "transformer": {
+    "enabled": false,
+    "reason": "deshabilitado por --no-transformer"
+  }
+}

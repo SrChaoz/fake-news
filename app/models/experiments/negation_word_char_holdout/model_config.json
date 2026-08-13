@@ -1,0 +1,28 @@
+{
+  "variant": "negation_aware_word_char_logreg",
+  "classifier": "LogisticRegression",
+  "feature_mode": "text_tfidf_only",
+  "decision_threshold_real": 0.48,
+  "transformer": {
+    "enabled": false,
+    "reason": "El experimento léxico no usa embeddings."
+  },
+  "preprocessing": {
+    "word_ngrams": [
+      1,
+      2
+    ],
+    "character_ngrams": [
+      3,
+      5
+    ],
+    "preserved_negations": [
+      "neither",
+      "never",
+      "no",
+      "nor",
+      "not",
+      "without"
+    ]
+  }
+}

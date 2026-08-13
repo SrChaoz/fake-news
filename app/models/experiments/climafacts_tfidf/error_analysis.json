@@ -1,0 +1,1942 @@
+[
+  {
+    "raw_text": "Ironic' study finds more CO2 has slightly cooled the planet",
+    "claim": "Ironic' study finds more CO2 has slightly cooled the planet",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.58,
+    "entities": [
+      {
+        "text": "Ironic",
+        "normalized": "ironic",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 0,
+        "end_char": 6
+      },
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 25,
+        "end_char": 28
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "The connection between Hurricane Sandy and global warming \"The magnitude of ignorance on display by people claiming Sandy is a sign of global warming is stunning!\" (Joe Bastardi)",
+    "claim": "The connection between Hurricane Sandy and global warming \"The magnitude of ignorance on display by people claiming Sandy is a sign of global warming is stunning!\" (Joe Bastardi)",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.72,
+    "entities": [
+      {
+        "text": "Hurricane Sandy",
+        "normalized": "hurricane sandy",
+        "label": "SPACY_EVENT",
+        "source": "spacy",
+        "start_char": 23,
+        "end_char": 38
+      },
+      {
+        "text": "global warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 43,
+        "end_char": 57
+      },
+      {
+        "text": "Sandy",
+        "normalized": "sandy",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 116,
+        "end_char": 121
+      },
+      {
+        "text": "global warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 135,
+        "end_char": 149
+      },
+      {
+        "text": "Joe Bastardi",
+        "normalized": "joe bastardi",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 165,
+        "end_char": 177
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Melting ice isn't warming the Arctic.",
+    "claim": "Melting ice isn't warming the Arctic.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.6144,
+    "entities": [
+      {
+        "text": "Arctic",
+        "normalized": "arctic",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 30,
+        "end_char": 36
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Severe storms, floods and agricultural losses may cost a great deal of money, but such extreme weather events—and their resulting costs—are dramatically declining as the Earth modestly warms.",
+    "claim": "Severe storms, floods and agricultural losses may cost a great deal of money, but such extreme weather events—and their resulting costs—are dramatically declining as the Earth modestly warms.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.91,
+    "entities": [
+      {
+        "text": "Earth",
+        "normalized": "earth",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 170,
+        "end_char": 175
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "New data shows sea ice levels in the Arctic and Antarctic are at record lows for this time of year. 🌎  This is a significant trend to watch. #Climate",
+    "claim": "New data shows sea ice levels in the Arctic and Antarctic are at record lows for this time of year. 🌎  This is a significant trend to watch. #Climate",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.59,
+    "entities": [
+      {
+        "text": "Arctic",
+        "normalized": "arctic",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 37,
+        "end_char": 43
+      },
+      {
+        "text": "Antarctic",
+        "normalized": "antarctic",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 48,
+        "end_char": 57
+      },
+      {
+        "text": "this time of year",
+        "normalized": "this time of year",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 81,
+        "end_char": 98
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "It's clear that one of IPCC's missions was to establish the human impact on climate change. That's why their findings are so crucial! #ClimateAction",
+    "claim": "It's clear that one of IPCC's missions was to establish the human impact on climate change. That's why their findings are so crucial! #ClimateAction",
+    "original_label": null,
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.49,
+    "entities": [
+      {
+        "text": "one",
+        "normalized": "one",
+        "label": "SPACY_CARDINAL",
+        "source": "spacy",
+        "start_char": 16,
+        "end_char": 19
+      },
+      {
+        "text": "IPCC",
+        "normalized": "ipcc",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 23,
+        "end_char": 27
+      },
+      {
+        "text": "climate change",
+        "normalized": "climate change",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 76,
+        "end_char": 90
+      },
+      {
+        "text": "ClimateAction",
+        "normalized": "climateaction",
+        "label": "SPACY_MONEY",
+        "source": "spacy",
+        "start_char": 135,
+        "end_char": 148
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Glaciers are growing “[R]eports are coming in from all over the world: for the first time in over 250 years, glaciers in Alaska, Canada, New Zealand, Greenland, and now Norway are growing.”(JamulBlog)",
+    "claim": "Glaciers are growing “[R]eports are coming in from all over the world: for the first time in over 250 years, glaciers in Alaska, Canada, New Zealand, Greenland, and now Norway are growing.”(JamulBlog)",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.79,
+    "entities": [
+      {
+        "text": "first",
+        "normalized": "first",
+        "label": "SPACY_ORDINAL",
+        "source": "spacy",
+        "start_char": 79,
+        "end_char": 84
+      },
+      {
+        "text": "over 250 years",
+        "normalized": "over 250 years",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 93,
+        "end_char": 107
+      },
+      {
+        "text": "Alaska",
+        "normalized": "alaska",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 121,
+        "end_char": 127
+      },
+      {
+        "text": "Canada",
+        "normalized": "canada",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 129,
+        "end_char": 135
+      },
+      {
+        "text": "New Zealand",
+        "normalized": "new zealand",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 137,
+        "end_char": 148
+      },
+      {
+        "text": "Greenland",
+        "normalized": "greenland",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 150,
+        "end_char": 159
+      },
+      {
+        "text": "Norway",
+        "normalized": "norway",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 169,
+        "end_char": 175
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Small amounts of very active substances can cause large effects.",
+    "claim": "Small amounts of very active substances can cause large effects.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.76,
+    "entities": [],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Global sea level data shows that sea level rise has been increasing since 1880 while future sea level rise predictions are based on physics, not statistics.",
+    "claim": "Global sea level data shows that sea level rise has been increasing since 1880 while future sea level rise predictions are based on physics, not statistics.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.2173,
+    "entities": [
+      {
+        "text": "sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 7,
+        "end_char": 16
+      },
+      {
+        "text": "sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 33,
+        "end_char": 42
+      },
+      {
+        "text": "1880",
+        "normalized": "1880",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 74,
+        "end_char": 78
+      },
+      {
+        "text": "sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 92,
+        "end_char": 101
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Apparently the Great Barrier Reef is in good shape. That's a relief, given all the bad news about coral reefs lately.",
+    "claim": "Apparently the Great Barrier Reef is in good shape. That's a relief, given all the bad news about coral reefs lately.",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.6,
+    "entities": [
+      {
+        "text": "the Great Barrier Reef",
+        "normalized": "the great barrier reef",
+        "label": "SPACY_FAC",
+        "source": "spacy",
+        "start_char": 11,
+        "end_char": 33
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Extreme high temperatures were seen from India — where the city of Phalodi recorded temperatures of 51 degrees Celsius (123.8 Fahrenheit) in May, a new national record — to Iran, where a temperature of 53 degrees Celsius (127.4 F) was recorded in Delhoran on July 22.",
+    "claim": "Extreme high temperatures were seen from India — where the city of Phalodi recorded temperatures of 51 degrees Celsius (123.8 Fahrenheit) in May, a new national record — to Iran, where a temperature of 53 degrees Celsius (127.4 F) was recorded in Delhoran on July 22.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.57,
+    "entities": [
+      {
+        "text": "India",
+        "normalized": "india",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 41,
+        "end_char": 46
+      },
+      {
+        "text": "Phalodi",
+        "normalized": "phalodi",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 67,
+        "end_char": 74
+      },
+      {
+        "text": "51 degrees",
+        "normalized": "51 degrees",
+        "label": "SPACY_QUANTITY",
+        "source": "spacy",
+        "start_char": 100,
+        "end_char": 110
+      },
+      {
+        "text": "123.8",
+        "normalized": "123.8",
+        "label": "SPACY_CARDINAL",
+        "source": "spacy",
+        "start_char": 120,
+        "end_char": 125
+      },
+      {
+        "text": "May",
+        "normalized": "may",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 141,
+        "end_char": 144
+      },
+      {
+        "text": "Iran",
+        "normalized": "iran",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 173,
+        "end_char": 177
+      },
+      {
+        "text": "53 degrees Celsius",
+        "normalized": "53 degrees celsius",
+        "label": "SPACY_QUANTITY",
+        "source": "spacy",
+        "start_char": 202,
+        "end_char": 220
+      },
+      {
+        "text": "F",
+        "normalized": "f",
+        "label": "SPACY_PRODUCT",
+        "source": "spacy",
+        "start_char": 228,
+        "end_char": 229
+      },
+      {
+        "text": "Delhoran",
+        "normalized": "delhoran",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 247,
+        "end_char": 255
+      },
+      {
+        "text": "July 22",
+        "normalized": "july 22",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 259,
+        "end_char": 266
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "the Great Barrier Reef is in fine fettle",
+    "claim": "the Great Barrier Reef is in fine fettle",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.72,
+    "entities": [
+      {
+        "text": "the Great Barrier Reef",
+        "normalized": "the great barrier reef",
+        "label": "SPACY_FAC",
+        "source": "spacy",
+        "start_char": 0,
+        "end_char": 22
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "A major part of the climate change bill sponsored by Sens. John Kerry and Joe Lieberman \"was essentially written by BP.\"",
+    "claim": "A major part of the climate change bill sponsored by Sens. John Kerry and Joe Lieberman \"was essentially written by BP.\"",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.56,
+    "entities": [
+      {
+        "text": "climate change",
+        "normalized": "climate change",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 20,
+        "end_char": 34
+      },
+      {
+        "text": "John Kerry",
+        "normalized": "john kerry",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 59,
+        "end_char": 69
+      },
+      {
+        "text": "Joe Lieberman",
+        "normalized": "joe lieberman",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 74,
+        "end_char": 87
+      },
+      {
+        "text": "BP",
+        "normalized": "bp",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 116,
+        "end_char": 118
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "A new study says rising CO2 levels could make plants grow better.",
+    "claim": "A new study says rising CO2 levels could make plants grow better.",
+    "original_label": null,
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.57,
+    "entities": [
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 24,
+        "end_char": 27
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Consequently, the total amount of Arctic sea ice in 2008 and 2009 are the lowest on record.",
+    "claim": "Consequently, the total amount of Arctic sea ice in 2008 and 2009 are the lowest on record.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.7711,
+    "entities": [
+      {
+        "text": "Arctic sea",
+        "normalized": "arctic sea",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 34,
+        "end_char": 44
+      },
+      {
+        "text": "2008",
+        "normalized": "2008",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 52,
+        "end_char": 56
+      },
+      {
+        "text": "2009",
+        "normalized": "2009",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 61,
+        "end_char": 65
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Sea ice is continuing to melt, both in the Arctic and Antarctic, leading to rising sea levels that have a huge impact on the environment. #ClimateChange #Arctic",
+    "claim": "Sea ice is continuing to melt, both in the Arctic and Antarctic, leading to rising sea levels that have a huge impact on the environment. #ClimateChange #Arctic",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.76,
+    "entities": [
+      {
+        "text": "Arctic",
+        "normalized": "arctic",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 43,
+        "end_char": 49
+      },
+      {
+        "text": "Antarctic",
+        "normalized": "antarctic",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 54,
+        "end_char": 63
+      },
+      {
+        "text": "ClimateChange",
+        "normalized": "climatechange",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 139,
+        "end_char": 152
+      },
+      {
+        "text": "Arctic",
+        "normalized": "arctic",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 154,
+        "end_char": 160
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Arctic sea ice has shrunk by an area equal to Western Australia, and summer or multi-year sea ice might be all gone within a decade.",
+    "claim": "Arctic sea ice has shrunk by an area equal to Western Australia, and summer or multi-year sea ice might be all gone within a decade.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.49,
+    "entities": [
+      {
+        "text": "Arctic sea",
+        "normalized": "arctic sea",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 0,
+        "end_char": 10
+      },
+      {
+        "text": "Western Australia",
+        "normalized": "western australia",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 46,
+        "end_char": 63
+      },
+      {
+        "text": "summer",
+        "normalized": "summer",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 69,
+        "end_char": 75
+      },
+      {
+        "text": "multi-year sea ice",
+        "normalized": "multi-year sea ice",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 79,
+        "end_char": 97
+      },
+      {
+        "text": "a decade",
+        "normalized": "a decade",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 123,
+        "end_char": 131
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "In its 5th assessment report in 2013, the IPCC estimated that human emissions are probably responsible for more than half of the observed increase in global average temperature from 1951 to 2010.",
+    "claim": "In its 5th assessment report in 2013, the IPCC estimated that human emissions are probably responsible for more than half of the observed increase in global average temperature from 1951 to 2010.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.44,
+    "entities": [
+      {
+        "text": "5th",
+        "normalized": "5th",
+        "label": "SPACY_ORDINAL",
+        "source": "spacy",
+        "start_char": 7,
+        "end_char": 10
+      },
+      {
+        "text": "2013",
+        "normalized": "2013",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 32,
+        "end_char": 36
+      },
+      {
+        "text": "IPCC",
+        "normalized": "ipcc",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 42,
+        "end_char": 46
+      },
+      {
+        "text": "more than half",
+        "normalized": "more than half",
+        "label": "SPACY_CARDINAL",
+        "source": "spacy",
+        "start_char": 107,
+        "end_char": 121
+      },
+      {
+        "text": "1951 to 2010",
+        "normalized": "1951 to 2010",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 182,
+        "end_char": 194
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "In recent decades this warming has been accompanied by a constant rise in the sea level and, it would appear, by an increase of extreme weather events, even if a scientifically determinable cause cannot be assigned to each particular phenomenon.",
+    "claim": "In recent decades this warming has been accompanied by a constant rise in the sea level and, it would appear, by an increase of extreme weather events, even if a scientifically determinable cause cannot be assigned to each particular phenomenon.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.44,
+    "entities": [
+      {
+        "text": "recent decades",
+        "normalized": "recent decades",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 3,
+        "end_char": 17
+      },
+      {
+        "text": "sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 78,
+        "end_char": 87
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "“The oceans, which absorb more than 90% of the extra CO2 pumped into the atmosphere“",
+    "claim": "“The oceans, which absorb more than 90% of the extra CO2 pumped into the atmosphere“",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.82,
+    "entities": [
+      {
+        "text": "more than 90%",
+        "normalized": "more than 90%",
+        "label": "SPACY_PERCENT",
+        "source": "spacy",
+        "start_char": 26,
+        "end_char": 39
+      },
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 53,
+        "end_char": 56
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "CO2 emissions were much smaller 100 years ago.",
+    "claim": "CO2 emissions were much smaller 100 years ago.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.54,
+    "entities": [
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 0,
+        "end_char": 3
+      },
+      {
+        "text": "100 years ago",
+        "normalized": "100 years ago",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 32,
+        "end_char": 45
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "New data suggests the Earth is warming slower than some climate models predicted.",
+    "claim": "New data suggests the Earth is warming slower than some climate models predicted.",
+    "original_label": null,
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.56,
+    "entities": [
+      {
+        "text": "Earth",
+        "normalized": "earth",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 22,
+        "end_char": 27
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "“The most famous of these studies, published in 2010 by Paul Kench and Arthur Webb of the South Pacific Applied Geoscience Commission in Fiji, showed that of 27 Pacific islands, 14% lost area.",
+    "claim": "“The most famous of these studies, published in 2010 by Paul Kench and Arthur Webb of the South Pacific Applied Geoscience Commission in Fiji, showed that of 27 Pacific islands, 14% lost area.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.84,
+    "entities": [
+      {
+        "text": "2010",
+        "normalized": "2010",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 48,
+        "end_char": 52
+      },
+      {
+        "text": "Paul Kench",
+        "normalized": "paul kench",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 56,
+        "end_char": 66
+      },
+      {
+        "text": "Arthur Webb",
+        "normalized": "arthur webb",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 71,
+        "end_char": 82
+      },
+      {
+        "text": "the South Pacific Applied Geoscience Commission",
+        "normalized": "the south pacific applied geoscience commission",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 86,
+        "end_char": 133
+      },
+      {
+        "text": "Fiji",
+        "normalized": "fiji",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 137,
+        "end_char": 141
+      },
+      {
+        "text": "27",
+        "normalized": "27",
+        "label": "SPACY_CARDINAL",
+        "source": "spacy",
+        "start_char": 158,
+        "end_char": 160
+      },
+      {
+        "text": "Pacific islands",
+        "normalized": "pacific islands",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 161,
+        "end_char": 176
+      },
+      {
+        "text": "14%",
+        "normalized": "14%",
+        "label": "SPACY_PERCENT",
+        "source": "spacy",
+        "start_char": 178,
+        "end_char": 181
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "The sea level was 20 to 30 feet higher than it is today, implying that the ice sheets in both Greenland and Antarctica must have partly disintegrated, a warning of what could occur in the relatively near future if the heating of the planet continues unchecked.”",
+    "claim": "The sea level was 20 to 30 feet higher than it is today, implying that the ice sheets in both Greenland and Antarctica must have partly disintegrated, a warning of what could occur in the relatively near future if the heating of the planet continues unchecked.”",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.43,
+    "entities": [
+      {
+        "text": "sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 4,
+        "end_char": 13
+      },
+      {
+        "text": "20 to 30 feet",
+        "normalized": "20 to 30 feet",
+        "label": "SPACY_QUANTITY",
+        "source": "spacy",
+        "start_char": 18,
+        "end_char": 31
+      },
+      {
+        "text": "today",
+        "normalized": "today",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 50,
+        "end_char": 55
+      },
+      {
+        "text": "Greenland",
+        "normalized": "greenland",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 94,
+        "end_char": 103
+      },
+      {
+        "text": "Antarctica",
+        "normalized": "antarctica",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 108,
+        "end_char": 118
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Heat waves have been decreasing since the 1930s in the U.S. and globally.",
+    "claim": "Heat waves have been decreasing since the 1930s in the U.S. and globally.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.85,
+    "entities": [
+      {
+        "text": "the 1930s",
+        "normalized": "the 1930s",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 38,
+        "end_char": 47
+      },
+      {
+        "text": "U.S.",
+        "normalized": "u.s.",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 55,
+        "end_char": 59
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Those who contribute the least greenhouse gases will be most impacted by climate change.",
+    "claim": "Those who contribute the least greenhouse gases will be most impacted by climate change.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.52,
+    "entities": [
+      {
+        "text": "climate change",
+        "normalized": "climate change",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 73,
+        "end_char": 87
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "The idea that climate change is producing heat records across the Earth is among the most egregious manipulations of data in the absurd global warming debate.",
+    "claim": "The idea that climate change is producing heat records across the Earth is among the most egregious manipulations of data in the absurd global warming debate.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.67,
+    "entities": [
+      {
+        "text": "climate change",
+        "normalized": "climate change",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 14,
+        "end_char": 28
+      },
+      {
+        "text": "Earth",
+        "normalized": "earth",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 66,
+        "end_char": 71
+      },
+      {
+        "text": "global warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 136,
+        "end_char": 150
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Planting a trillion trees will solve global warming \"There is no limit to how much carbon we can store in wood\" [Rep. Bruce Westerman (R-AR)]",
+    "claim": "Planting a trillion trees will solve global warming \"There is no limit to how much carbon we can store in wood\" [Rep. Bruce Westerman (R-AR)]",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.73,
+    "entities": [
+      {
+        "text": "global warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 37,
+        "end_char": 51
+      },
+      {
+        "text": "Bruce Westerman",
+        "normalized": "bruce westerman",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 118,
+        "end_char": 133
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Whoa, scientists just retracted the claim that sea levels are rising! What gives? 🤔 #ClimateChange #SeaLevels",
+    "claim": "Whoa, scientists just retracted the claim that sea levels are rising! What gives? 🤔 #ClimateChange #SeaLevels",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.65,
+    "entities": [
+      {
+        "text": "SeaLevels",
+        "normalized": "sealevels",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 100,
+        "end_char": 109
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Increasing CO2 in the atmosphere has little to no effect.",
+    "claim": "Increasing CO2 in the atmosphere has little to no effect.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.62,
+    "entities": [
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 11,
+        "end_char": 14
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "the warming is not nearly as great as the climate change computer models have predicted.",
+    "claim": "the warming is not nearly as great as the climate change computer models have predicted.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.79,
+    "entities": [
+      {
+        "text": "climate change",
+        "normalized": "climate change",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 42,
+        "end_char": 56
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Lake-bottom sediments in Florida tell us that recent major hurricane activity in the Gulf of Mexico has been less frequent than in centuries past.",
+    "claim": "Lake-bottom sediments in Florida tell us that recent major hurricane activity in the Gulf of Mexico has been less frequent than in centuries past.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.58,
+    "entities": [
+      {
+        "text": "Florida",
+        "normalized": "florida",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 25,
+        "end_char": 32
+      },
+      {
+        "text": "the Gulf of Mexico",
+        "normalized": "the gulf of mexico",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 81,
+        "end_char": 99
+      },
+      {
+        "text": "centuries",
+        "normalized": "centuries",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 131,
+        "end_char": 140
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "the mild warming of around 0.8 degrees Celsius that the planet has experienced since the middle of the 19th century",
+    "claim": "the mild warming of around 0.8 degrees Celsius that the planet has experienced since the middle of the 19th century",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.94,
+    "entities": [
+      {
+        "text": "0.8 degrees Celsius",
+        "normalized": "0.8 degrees celsius",
+        "label": "SPACY_QUANTITY",
+        "source": "spacy",
+        "start_char": 27,
+        "end_char": 46
+      },
+      {
+        "text": "the middle of the 19th century",
+        "normalized": "the middle of the 19th century",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 85,
+        "end_char": 115
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "As a result, \"The warmest  year on US record is now 1934.",
+    "claim": "As a result, \"The warmest year on US record is now 1934.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.92,
+    "entities": [
+      {
+        "text": "US",
+        "normalized": "us",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 34,
+        "end_char": 36
+      },
+      {
+        "text": "1934",
+        "normalized": "1934",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 51,
+        "end_char": 55
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Electricity rates are 40 percent higher in states that have required utility companies to use a certain amount of renewable energy such as solar power.",
+    "claim": "Electricity rates are 40 percent higher in states that have required utility companies to use a certain amount of renewable energy such as solar power.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.45,
+    "entities": [
+      {
+        "text": "40 percent",
+        "normalized": "40 percent",
+        "label": "SPACY_PERCENT",
+        "source": "spacy",
+        "start_char": 22,
+        "end_char": 32
+      },
+      {
+        "text": "renewable energy",
+        "normalized": "renewable energy",
+        "label": "ENERGY_SOURCE",
+        "source": "domain_dictionary",
+        "start_char": 114,
+        "end_char": 130
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Computer models are just a bunch of calculations that could be done by hand.  #science #models #understanding",
+    "claim": "Computer models are just a bunch of calculations that could be done by hand.  #science #models #understanding",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.9067,
+    "entities": [],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "There is no single continuous satellite measurement of Total Solar Irradiance (TSI).",
+    "claim": "There is no single continuous satellite measurement of Total Solar Irradiance (TSI).",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.7,
+    "entities": [
+      {
+        "text": "Total Solar Irradiance",
+        "normalized": "total solar irradiance",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 55,
+        "end_char": 77
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "During the period 1940 to 1976 there was a cooling of the climate despite increasing CO2 levels.",
+    "claim": "During the period 1940 to 1976 there was a cooling of the climate despite increasing CO2 levels.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.7229,
+    "entities": [
+      {
+        "text": "the period 1940 to 1976",
+        "normalized": "the period 1940 to 1976",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 7,
+        "end_char": 30
+      },
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 85,
+        "end_char": 88
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Phil Jones says no global warming since 1995.",
+    "claim": "Phil Jones says no global warming since 1995.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.69,
+    "entities": [
+      {
+        "text": "Phil Jones",
+        "normalized": "phil jones",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 0,
+        "end_char": 10
+      },
+      {
+        "text": "global warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 19,
+        "end_char": 33
+      },
+      {
+        "text": "1995",
+        "normalized": "1995",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 40,
+        "end_char": 44
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "“Sea level rise is global.",
+    "claim": "“Sea level rise is global.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.05,
+    "entities": [
+      {
+        "text": "Sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 1,
+        "end_char": 10
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Nevertheless over the last decade, daily record high temperatures occurred twice as often as record lows.",
+    "claim": "Nevertheless over the last decade, daily record high temperatures occurred twice as often as record lows.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.67,
+    "entities": [
+      {
+        "text": "the last decade",
+        "normalized": "the last decade",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 18,
+        "end_char": 33
+      },
+      {
+        "text": "daily",
+        "normalized": "daily",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 35,
+        "end_char": 40
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "“A leading Canadian authority on polar bears, Mitch Taylor, said: ‘We’re  seeing an increase in bears that’s really unprecedented, and in places  where we’re seeing a decrease in the population",
+    "claim": "“A leading Canadian authority on polar bears, Mitch Taylor, said: ‘We’re seeing an increase in bears that’s really unprecedented, and in places where we’re seeing a decrease in the population",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.52,
+    "entities": [
+      {
+        "text": "Canadian",
+        "normalized": "canadian",
+        "label": "SPACY_NORP",
+        "source": "spacy",
+        "start_char": 11,
+        "end_char": 19
+      },
+      {
+        "text": "Mitch Taylor",
+        "normalized": "mitch taylor",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 46,
+        "end_char": 58
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "steadily escalating carbon prices could slow climate feedback loops and potentially reduce the short-term warming trend by more than 50% over the next few decades.",
+    "claim": "steadily escalating carbon prices could slow climate feedback loops and potentially reduce the short-term warming trend by more than 50% over the next few decades.",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.82,
+    "entities": [
+      {
+        "text": "more than 50%",
+        "normalized": "more than 50%",
+        "label": "SPACY_PERCENT",
+        "source": "spacy",
+        "start_char": 123,
+        "end_char": 136
+      },
+      {
+        "text": "the next few decades",
+        "normalized": "the next few decades",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 142,
+        "end_char": 162
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Some scientists say the recent cold snap in Britain might be a sign of a global trend towards colder weather..",
+    "claim": "Some scientists say the recent cold snap in Britain might be a sign of a global trend towards colder weather..",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.67,
+    "entities": [
+      {
+        "text": "Britain",
+        "normalized": "britain",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 44,
+        "end_char": 51
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "“Today climate scientists are obsessed with the level of carbon dioxide in the atmosphere, a very very small part of the overall picture.",
+    "claim": "“Today climate scientists are obsessed with the level of carbon dioxide in the atmosphere, a very very small part of the overall picture.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.64,
+    "entities": [
+      {
+        "text": "Today",
+        "normalized": "today",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 1,
+        "end_char": 6
+      },
+      {
+        "text": "carbon dioxide",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 57,
+        "end_char": 71
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "'Our harmless emissions of trifling quantities of carbon dioxide cannot possibly acidify the oceans.",
+    "claim": "'Our harmless emissions of trifling quantities of carbon dioxide cannot possibly acidify the oceans.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.76,
+    "entities": [
+      {
+        "text": "carbon dioxide",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 50,
+        "end_char": 64
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "energy storage technologies are critical to renewable energy systems",
+    "claim": "energy storage technologies are critical to renewable energy systems",
+    "original_label": null,
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.5267,
+    "entities": [
+      {
+        "text": "renewable energy",
+        "normalized": "renewable energy",
+        "label": "ENERGY_SOURCE",
+        "source": "domain_dictionary",
+        "start_char": 44,
+        "end_char": 60
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "The temperature is not rising nearly as fast as the alarmist computer models predicted.",
+    "claim": "The temperature is not rising nearly as fast as the alarmist computer models predicted.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.81,
+    "entities": [],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "There is no empirical evidence that increasing greenhouse gases are the primary cause of Global Warming",
+    "claim": "There is no empirical evidence that increasing greenhouse gases are the primary cause of Global Warming",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.65,
+    "entities": [
+      {
+        "text": "Global Warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 89,
+        "end_char": 103
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "\"Satellite measurements indicate an absence of significant global warming since 1979, the very period that human carbon dioxide emissions have been increasing rapidly.",
+    "claim": "\"Satellite measurements indicate an absence of significant global warming since 1979, the very period that human carbon dioxide emissions have been increasing rapidly.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.61,
+    "entities": [
+      {
+        "text": "global warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 59,
+        "end_char": 73
+      },
+      {
+        "text": "1979",
+        "normalized": "1979",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 80,
+        "end_char": 84
+      },
+      {
+        "text": "carbon dioxide",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 113,
+        "end_char": 127
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "there were no ice sheets covering either Greenland or West Antarctica, and much of the East Antarctic ice sheet was gone.",
+    "claim": "there were no ice sheets covering either Greenland or West Antarctica, and much of the East Antarctic ice sheet was gone.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.85,
+    "entities": [
+      {
+        "text": "Greenland",
+        "normalized": "greenland",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 41,
+        "end_char": 50
+      },
+      {
+        "text": "West Antarctica",
+        "normalized": "west antarctica",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 54,
+        "end_char": 69
+      },
+      {
+        "text": "East Antarctic",
+        "normalized": "east antarctic",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 87,
+        "end_char": 101
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "While members of the media may nod along to such claims [about changes in weather extremes], the evidence paints a different story",
+    "claim": "While members of the media may nod along to such claims [about changes in weather extremes], the evidence paints a different story",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.47,
+    "entities": [],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Earth’s mean temperature over the last 2,000 years shows two previous periods when temperatures were warmer than they are now; from 1–200 A.D., an epoch called the Roman Warm Period, and more recently the Medieval Warm Period from 900–1100 A.D.",
+    "claim": "Earth’s mean temperature over the last 2,000 years shows two previous periods when temperatures were warmer than they are now; from 1–200 A.D., an epoch called the Roman Warm Period, and more recently the Medieval Warm Period from 900–1100 A.D.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.42,
+    "entities": [
+      {
+        "text": "Earth",
+        "normalized": "earth",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 0,
+        "end_char": 5
+      },
+      {
+        "text": "the last 2,000 years",
+        "normalized": "the last 2,000 years",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 30,
+        "end_char": 50
+      },
+      {
+        "text": "two",
+        "normalized": "two",
+        "label": "SPACY_CARDINAL",
+        "source": "spacy",
+        "start_char": 57,
+        "end_char": 60
+      },
+      {
+        "text": "1–200",
+        "normalized": "1–200",
+        "label": "SPACY_CARDINAL",
+        "source": "spacy",
+        "start_char": 132,
+        "end_char": 137
+      },
+      {
+        "text": "the Roman Warm Period",
+        "normalized": "the roman warm period",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 160,
+        "end_char": 181
+      },
+      {
+        "text": "the Medieval Warm Period",
+        "normalized": "the medieval warm period",
+        "label": "SPACY_LAW",
+        "source": "spacy",
+        "start_char": 201,
+        "end_char": 225
+      },
+      {
+        "text": "900–1100",
+        "normalized": "900–1100",
+        "label": "SPACY_CARDINAL",
+        "source": "spacy",
+        "start_char": 231,
+        "end_char": 239
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "So CO2 causes warming AND rising temperature causes CO2 rise.",
+    "claim": "So CO2 causes warming AND rising temperature causes CO2 rise.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.45,
+    "entities": [
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 3,
+        "end_char": 6
+      },
+      {
+        "text": "CO2",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 52,
+        "end_char": 55
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Thick arctic sea ice is in rapid retreat.",
+    "claim": "Thick arctic sea ice is in rapid retreat.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.5562,
+    "entities": [
+      {
+        "text": "arctic sea ice",
+        "normalized": "arctic sea ice",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 6,
+        "end_char": 20
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "While preventing global warming is relatively cheap, economists can't even accurately estimate the accelerating costs of climate damages if we continue with business-as-usual.",
+    "claim": "While preventing global warming is relatively cheap, economists can't even accurately estimate the accelerating costs of climate damages if we continue with business-as-usual.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.93,
+    "entities": [
+      {
+        "text": "global warming",
+        "normalized": "global warming",
+        "label": "CLIMATE_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 17,
+        "end_char": 31
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "The most vulnerable parts of the West Antarctic ice sheet could raise the sea level by 10 to 15 feet, inundating many of the world’s coastal cities, though most scientists think that would take well over a century, or perhaps longer.",
+    "claim": "The most vulnerable parts of the West Antarctic ice sheet could raise the sea level by 10 to 15 feet, inundating many of the world’s coastal cities, though most scientists think that would take well over a century, or perhaps longer.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.56,
+    "entities": [
+      {
+        "text": "West Antarctic",
+        "normalized": "west antarctic",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 33,
+        "end_char": 47
+      },
+      {
+        "text": "sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 74,
+        "end_char": 83
+      },
+      {
+        "text": "10 to 15 feet",
+        "normalized": "10 to 15 feet",
+        "label": "SPACY_QUANTITY",
+        "source": "spacy",
+        "start_char": 87,
+        "end_char": 100
+      },
+      {
+        "text": "well over a century",
+        "normalized": "well over a century",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 194,
+        "end_char": 213
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Sea level rise of 65 centimeters, or roughly 2 feet would cause significant problems for coastal cities around the world.",
+    "claim": "Sea level rise of 65 centimeters, or roughly 2 feet would cause significant problems for coastal cities around the world.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.5673,
+    "entities": [
+      {
+        "text": "Sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 0,
+        "end_char": 9
+      },
+      {
+        "text": "65 centimeters",
+        "normalized": "65 centimeters",
+        "label": "SPACY_QUANTITY",
+        "source": "spacy",
+        "start_char": 18,
+        "end_char": 32
+      },
+      {
+        "text": "roughly 2 feet",
+        "normalized": "roughly 2 feet",
+        "label": "SPACY_QUANTITY",
+        "source": "spacy",
+        "start_char": 37,
+        "end_char": 51
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Eleven percent of all global greenhouse gas emissions caused by humans are caused by deforestation — comparable to the emissions from all of the cars and trucks on the planet.",
+    "claim": "Eleven percent of all global greenhouse gas emissions caused by humans are caused by deforestation — comparable to the emissions from all of the cars and trucks on the planet.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.67,
+    "entities": [
+      {
+        "text": "greenhouse gas",
+        "normalized": "greenhouse gas",
+        "label": "ENVIRONMENTAL_CONCEPT",
+        "source": "domain_dictionary",
+        "start_char": 29,
+        "end_char": 43
+      },
+      {
+        "text": "deforestation",
+        "normalized": "deforestation",
+        "label": "ENVIRONMENTAL_PROCESS",
+        "source": "domain_dictionary",
+        "start_char": 85,
+        "end_char": 98
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "What they find is sea level rise has been steadily accelerating over the past century.",
+    "claim": "What they find is sea level rise has been steadily accelerating over the past century.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.23,
+    "entities": [
+      {
+        "text": "sea level",
+        "normalized": "sea level",
+        "label": "CLIMATE_INDICATOR",
+        "source": "domain_dictionary",
+        "start_char": 18,
+        "end_char": 27
+      },
+      {
+        "text": "the past century",
+        "normalized": "the past century",
+        "label": "SPACY_DATE",
+        "source": "spacy",
+        "start_char": 69,
+        "end_char": 85
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "While the north-east, midwest and upper great plains have experienced a 30% increase in heavy rainfall episodes – considered once-in-every-five year downpours – parts of the west, particularly California, have been parched by drought.",
+    "claim": "While the north-east, midwest and upper great plains have experienced a 30% increase in heavy rainfall episodes – considered once-in-every-five year downpours – parts of the west, particularly California, have been parched by drought.",
+    "original_label": "SUPPORTS",
+    "actual": "REAL",
+    "predicted": "FAKE",
+    "confidence_real": 0.56,
+    "entities": [
+      {
+        "text": "midwest",
+        "normalized": "midwest",
+        "label": "SPACY_LOC",
+        "source": "spacy",
+        "start_char": 22,
+        "end_char": 29
+      },
+      {
+        "text": "30%",
+        "normalized": "30%",
+        "label": "SPACY_PERCENT",
+        "source": "spacy",
+        "start_char": 72,
+        "end_char": 75
+      },
+      {
+        "text": "California",
+        "normalized": "california",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 193,
+        "end_char": 203
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Interesting fact: There's no noticeable trend in hurricane flooding in the US.",
+    "claim": "Interesting fact: There's no noticeable trend in hurricane flooding in the US.",
+    "original_label": null,
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.67,
+    "entities": [
+      {
+        "text": "US",
+        "normalized": "us",
+        "label": "SPACY_GPE",
+        "source": "spacy",
+        "start_char": 75,
+        "end_char": 77
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "Even if the warming were as big as the IPCC imagines, it would not be as dangerous as Mr. Brown suggests.",
+    "claim": "Even if the warming were as big as the IPCC imagines, it would not be as dangerous as Mr. Brown suggests.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.62,
+    "entities": [
+      {
+        "text": "IPCC",
+        "normalized": "ipcc",
+        "label": "SPACY_ORG",
+        "source": "spacy",
+        "start_char": 39,
+        "end_char": 43
+      },
+      {
+        "text": "Brown",
+        "normalized": "brown",
+        "label": "SPACY_PERSON",
+        "source": "spacy",
+        "start_char": 90,
+        "end_char": 95
+      }
+    ],
+    "ontological_conflicts": []
+  },
+  {
+    "raw_text": "If we halve the carbon dioxide content of the atmosphere, all life dies.",
+    "claim": "If we halve the carbon dioxide content of the atmosphere, all life dies.",
+    "original_label": "REFUTES",
+    "actual": "FAKE",
+    "predicted": "REAL",
+    "confidence_real": 0.69,
+    "entities": [
+      {
+        "text": "carbon dioxide",
+        "normalized": "carbon dioxide",
+        "label": "GREENHOUSE_GAS",
+        "source": "domain_dictionary",
+        "start_char": 16,
+        "end_char": 30
+      }
+    ],
+    "ontological_conflicts": []
+  }
+]

@@ -1,0 +1,272 @@
+{
+  "dataset": {
+    "records": 1004,
+    "class_counts": {
+      "FAKE": 435,
+      "REAL": 569
+    },
+    "excluded_benchmark_claims": 199,
+    "test_size": 0.2
+  },
+  "transformer": {
+    "enabled": false,
+    "reason": "El experimento léxico no usa embeddings."
+  },
+  "baseline": {
+    "name": "Negation-aware word + character TF-IDF Logistic Regression",
+    "metrics": {
+      "accuracy": 0.6716,
+      "balanced_accuracy": 0.6588,
+      "precision": 0.6935,
+      "recall": 0.7544,
+      "f1_score": 0.7227,
+      "macro_f1": 0.6601,
+      "per_class": {
+        "FAKE": {
+          "precision": 0.6364,
+          "recall": 0.5632,
+          "f1_score": 0.5976
+        },
+        "REAL": {
+          "precision": 0.6935,
+          "recall": 0.7544,
+          "f1_score": 0.7227
+        }
+      },
+      "confusion_matrix": [
+        [
+          49,
+          38
+        ],
+        [
+          28,
+          86
+        ]
+      ]
+    }
+  },
+  "ablation_study": {
+    "full_hybrid": {
+      "accuracy": 0.6716,
+      "balanced_accuracy": 0.6588,
+      "precision": 0.6935,
+      "recall": 0.7544,
+      "f1_score": 0.7227,
+      "macro_f1": 0.6601,
+      "per_class": {
+        "FAKE": {
+          "precision": 0.6364,
+          "recall": 0.5632,
+          "f1_score": 0.5976
+        },
+        "REAL": {
+          "precision": 0.6935,
+          "recall": 0.7544,
+          "f1_score": 0.7227
+        }
+      },
+      "confusion_matrix": [
+        [
+          49,
+          38
+        ],
+        [
+          28,
+          86
+        ]
+      ]
+    }
+  },
+  "threshold_calibration": {
+    "threshold_real": 0.48,
+    "target_fake_recall": 0.6
+  },
+  "cross_validation": {
+    "folds": [
+      {
+        "accuracy": 0.6915,
+        "balanced_accuracy": 0.6832,
+        "precision": 0.7203,
+        "recall": 0.7456,
+        "f1_score": 0.7328,
+        "macro_f1": 0.684,
+        "per_class": {
+          "FAKE": {
+            "precision": 0.6506,
+            "recall": 0.6207,
+            "f1_score": 0.6353
+          },
+          "REAL": {
+            "precision": 0.7203,
+            "recall": 0.7456,
+            "f1_score": 0.7328
+          }
+        },
+        "confusion_matrix": [
+          [
+            54,
+            33
+          ],
+          [
+            29,
+            85
+          ]
+        ],
+        "fold": 1
+      },
+      {
+        "accuracy": 0.7164,
+        "balanced_accuracy": 0.7092,
+        "precision": 0.7436,
+        "recall": 0.7632,
+        "f1_score": 0.7532,
+        "macro_f1": 0.71,
+        "per_class": {
+          "FAKE": {
+            "precision": 0.6786,
+            "recall": 0.6552,
+            "f1_score": 0.6667
+          },
+          "REAL": {
+            "precision": 0.7436,
+            "recall": 0.7632,
+            "f1_score": 0.7532
+          }
+        },
+        "confusion_matrix": [
+          [
+            57,
+            30
+          ],
+          [
+            27,
+            87
+          ]
+        ],
+        "fold": 2
+      },
+      {
+        "accuracy": 0.7413,
+        "balanced_accuracy": 0.7284,
+        "precision": 0.746,
+        "recall": 0.8246,
+        "f1_score": 0.7833,
+        "macro_f1": 0.7312,
+        "per_class": {
+          "FAKE": {
+            "precision": 0.7333,
+            "recall": 0.6322,
+            "f1_score": 0.679
+          },
+          "REAL": {
+            "precision": 0.746,
+            "recall": 0.8246,
+            "f1_score": 0.7833
+          }
+        },
+        "confusion_matrix": [
+          [
+            55,
+            32
+          ],
+          [
+            20,
+            94
+          ]
+        ],
+        "fold": 3
+      },
+      {
+        "accuracy": 0.6866,
+        "balanced_accuracy": 0.6747,
+        "precision": 0.7073,
+        "recall": 0.7632,
+        "f1_score": 0.7342,
+        "macro_f1": 0.6762,
+        "per_class": {
+          "FAKE": {
+            "precision": 0.6538,
+            "recall": 0.5862,
+            "f1_score": 0.6182
+          },
+          "REAL": {
+            "precision": 0.7073,
+            "recall": 0.7632,
+            "f1_score": 0.7342
+          }
+        },
+        "confusion_matrix": [
+          [
+            51,
+            36
+          ],
+          [
+            27,
+            87
+          ]
+        ],
+        "fold": 4
+      },
+      {
+        "accuracy": 0.73,
+        "balanced_accuracy": 0.7201,
+        "precision": 0.7438,
+        "recall": 0.7965,
+        "f1_score": 0.7692,
+        "macro_f1": 0.722,
+        "per_class": {
+          "FAKE": {
+            "precision": 0.7089,
+            "recall": 0.6437,
+            "f1_score": 0.6747
+          },
+          "REAL": {
+            "precision": 0.7438,
+            "recall": 0.7965,
+            "f1_score": 0.7692
+          }
+        },
+        "confusion_matrix": [
+          [
+            56,
+            31
+          ],
+          [
+            23,
+            90
+          ]
+        ],
+        "fold": 5
+      }
+    ],
+    "summary": {
+      "accuracy": {
+        "mean": 0.7132,
+        "std": 0.0213
+      },
+      "balanced_accuracy": {
+        "mean": 0.7031,
+        "std": 0.0208
+      },
+      "precision": {
+        "mean": 0.7322,
+        "std": 0.0156
+      },
+      "recall": {
+        "mean": 0.7786,
+        "std": 0.0283
+      },
+      "f1_score": {
+        "mean": 0.7545,
+        "std": 0.0196
+      },
+      "macro_f1": {
+        "mean": 0.7047,
+        "std": 0.0213
+      }
+    }
+  },
+  "feature_dimensions": {
+    "text_tfidf_only": 13000
+  }
+}

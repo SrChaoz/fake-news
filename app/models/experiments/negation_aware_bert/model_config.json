@@ -1,0 +1,28 @@
+{
+  "variant": "full_hybrid",
+  "symbolic_feature_order": [
+    "text_word_count",
+    "claim_word_count",
+    "claim_readability",
+    "linked_entity_count",
+    "has_conflict"
+  ],
+  "decision_threshold_real": 0.58,
+  "transformer": {
+    "enabled": true,
+    "model": "prajjwal1/bert-tiny",
+    "device": "cpu",
+    "embedding_dimension": 128
+  },
+  "preprocessing": {
+    "tfidf_stop_words": "english_preserve_negation",
+    "preserved_negations": [
+      "neither",
+      "never",
+      "no",
+      "nor",
+      "not",
+      "without"
+    ]
+  }
+}

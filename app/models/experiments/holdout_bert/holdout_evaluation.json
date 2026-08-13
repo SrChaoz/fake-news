@@ -1,0 +1,362 @@
+{
+  "benchmark": "data/evaluation/holdout_v1.jsonl",
+  "model_directory": "app/models/experiments/holdout_bert",
+  "records": 200,
+  "class_counts": {
+    "FAKE": 100,
+    "REAL": 100
+  },
+  "metrics": {
+    "accuracy": 0.825,
+    "balanced_accuracy": 0.825,
+    "macro_f1": 0.8237,
+    "fake": {
+      "precision": 0.7778,
+      "recall": 0.91,
+      "f1_score": 0.8387
+    },
+    "real": {
+      "precision": 0.8916,
+      "recall": 0.74,
+      "f1_score": 0.8087
+    },
+    "confusion_matrix": [
+      [
+        91,
+        9
+      ],
+      [
+        26,
+        74
+      ]
+    ]
+  },
+  "error_count": 35,
+  "errors_by_category": {
+    "Climate Change": 32,
+    "Biodiversity": 1,
+    "Pollution": 2
+  },
+  "errors_by_source": {
+    "climafactskg-ccby": 9,
+    "climatecheck-2026-consensus": 26
+  },
+  "errors": [
+    {
+      "claim": "It's a 1500 year cycle “Every one of them [climate records of the past] show this (roughly 1500 year) cycle. It was first discovered in ice cores in Greenland. Then it was seen in ocean sediments in the Atlantic. And now it’s been found everywhere, including in stalagmites in caves. [...] it could well account for the current warming.” (Fred Singer)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.62,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "It's only a few degrees \"There might be some adverse outcomes from that eight tenths of a degree of temperature rise threatening my Grandchildren in 2050, but neither I nor anyone else knows what those outcomes might be. We’ll assuredly get an extra flood over here, and one less flood over there, it’s very likely to be drier somewhere and wetter somewhere else, in other words, the climate will do what climate has done since forever — change.\" (Willis Eschenbach)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.57,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "It's official: the past five years have been the hottest ever. This is a big deal. We need to address climate change now. #ClimateCrisis",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.53,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Was Greenland really green in the past? “CfA's Sallie Baliunas [...] refers to the medieval Viking sagas as examples of unusual warming around 1003 A.D. ‘The Vikings established colonies in Greenland at the beginning of the second millennium, but they died out several hundred years later when the climate turned colder,’ she notes.” (William Cromie)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.56,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "the Antarctic is having its own ice melt problem! #ClimateChange",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.54,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Great Barrier Reef is in good shape the Great Barrier Reef is in fine fettle (Bob Carter)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.59,
+      "decision_source": "hybrid_random_forest",
+      "category": "Biodiversity",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Navy sonar has an impact on ocean life. 🌊",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.53,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Turns out, the CERN CLOUD experiment didn't prove what it set out to do.  They tested a small part of the theory about cosmic rays and climate change, and it's already failing.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.46,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "New data from satellites and field measurements confirm that Greenland's ice sheet is shrinking. #climatechange #greenland #glaciers",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.54,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Manufacturers should not ignore that consumers care about environmental impacts.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.53,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Record high snow cover was set in winter 2008/2009",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.59,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Antarctica is gaining ice \"[Ice] is expanding in much of Antarctica, contrary to the widespread public belief that global warming is melting the continental ice cap.\" (Greg Roberts, The Australian)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.6,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "The cost of inaction on air pollution is staggering: at least 34,000 lives lost each year. We need to act now. #health #environment",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.53,
+      "decision_source": "hybrid_random_forest",
+      "category": "Pollution",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Natural processes could be playing a bigger role in rising CO2 levels than we thought.  #CO2Rise #ClimateScience",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.55,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Climate change is a real thing, not some conspiracy theory. The science is pretty clear on that.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.55,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "eating less animal products is healthier",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.52,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "BTC mining harms climate and planet!.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.51,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Clear nights in fall and spring mean cooler temps! #science #weather",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.54,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Due to the energy-intensive processes, the production of plastics generates enormous amounts of greenhouse gas (GHG) emissions",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.53,
+      "decision_source": "hybrid_random_forest",
+      "category": "Pollution",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Globally, 15% of the GHG emissions are still animal agriculture",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.48,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Don't be fooled by the distance, what's happening in the Arctic is important for everyone. It's connected to our planet's health. #ArcticChange #WeAreAllConnected",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.53,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Animals and plants can adapt [C]orals, trees, birds, mammals, and butterflies are adapting well to the routine reality of changing climate.\" (source: Hudson Institute)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.61,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Climate change isn't just some future problem. We need to act now!",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.49,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Container ships carry about 80 per cent of global trade",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.55,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Climate change isn't just an environmental issue. It can have serious social and political impacts, too",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.53,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Did you know we're pumping gigatonnes of CO2 into the atmosphere every year?!  That's a LOT of carbon. #ClimateChange #Sustainability",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.51,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Climate science peer review is pal review \"Peer review has become ”pal review.” Send a paper to one of the very many journals published by the American Geophysical Union–the world’s largest publisher of academic climate science–and you can suggest five reviewers. The editor doesn’t have to take your advice, but he’s more likely to if you bought him dinner at the last AGU meeting, isn’t he? That is, of course, unless journal editors are somehow different than government officials, congressmen, or you.\" (Patrick Michaels)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.57,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Increased #soil #carbon sequestration slows #globalwarming.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.48,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Himalayan glaciers are not shrinking \"...the [Himalayan] glaciers are not shrinking. A new report by a senior Indian glaciologist states that the glaciers remain frozen and quite intact, thank you.\"(Doug Hoffman)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.61,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "New data shows that sea levels are rising faster than predicted. #ClimateChange #SeaLevelRise",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.55,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Even if we don't see record-breaking heat every year, the overall trend is clear: our planet's getting hotter. #ClimateChange #GlobalWarming",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.54,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "The latest research reinforces the projected rise in sea level,  potentially reaching up to 2 meters by 2100.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.54,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "You've probably heard about the 'social cost of carbon' -  basically, how much damage releasing CO2 does.  #climatechange #science #CO2",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.35,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "It's not just about reducing emissions, it's about finding the right balance.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.52,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "There's no natural explanation for the current warming trend. The 'fingerprint' of human activity is clear, and it's time we take action. #ClimateAction #GlobalWarming",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.55,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    }
+  ],
+  "warning": "Este benchmark es válido solo para modelos entrenados con --exclude-claims-file apuntando a este mismo JSONL."
+}

@@ -1,0 +1,35 @@
+{
+  "dataset": "ClimateCheck test (consenso estricto; nunca usado para entrenar)",
+  "records": 8,
+  "class_counts": {
+    "FAKE": 1,
+    "REAL": 7
+  },
+  "decision_threshold_real": 0.64,
+  "ontology_overrides": 0,
+  "reliability_warning": "La muestra externa de consenso estricto es menor de 50 registros; úsela solo como smoke test, no como estimación de generalización.",
+  "metrics": {
+    "accuracy": 0.75,
+    "balanced_accuracy": 0.8571,
+    "fake": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "f1_score": 0.5
+    },
+    "real": {
+      "precision": 1.0,
+      "recall": 0.7143,
+      "f1_score": 0.8333
+    },
+    "confusion_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        5
+      ]
+    ]
+  }
+}

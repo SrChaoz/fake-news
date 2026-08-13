@@ -1,0 +1,7 @@
+{
+  "decision_threshold_real": 0.56,
+  "total_errors": 70,
+  "false_negatives_fake": 46,
+  "false_positives_fake": 24,
+  "errors_with_ontological_conflict": 0
+}

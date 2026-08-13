@@ -1,0 +1,416 @@
+{
+  "benchmark": "data/evaluation/holdout_v1.jsonl",
+  "model_directory": "app/models/experiments/negation_word_char_holdout",
+  "records": 200,
+  "class_counts": {
+    "FAKE": 100,
+    "REAL": 100
+  },
+  "metrics": {
+    "accuracy": 0.795,
+    "balanced_accuracy": 0.795,
+    "macro_f1": 0.7947,
+    "fake": {
+      "precision": 0.8172,
+      "recall": 0.76,
+      "f1_score": 0.7876
+    },
+    "real": {
+      "precision": 0.7757,
+      "recall": 0.83,
+      "f1_score": 0.8019
+    },
+    "confusion_matrix": [
+      [
+        76,
+        24
+      ],
+      [
+        17,
+        83
+      ]
+    ]
+  },
+  "error_count": 41,
+  "errors_by_category": {
+    "Climate Change": 35,
+    "Biodiversity": 3,
+    "Energy": 3
+  },
+  "errors_by_source": {
+    "climafactskg-ccby": 24,
+    "climatecheck-2026-consensus": 17
+  },
+  "errors": [
+    {
+      "claim": "It's a 1500 year cycle “Every one of them [climate records of the past] show this (roughly 1500 year) cycle. It was first discovered in ice cores in Greenland. Then it was seen in ocean sediments in the Atlantic. And now it’s been found everywhere, including in stalagmites in caves. [...] it could well account for the current warming.” (Fred Singer)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.67,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Over 31,000 scientists signed the OISM Petition Project The Petition Project features over 31,000 scientists signing the petition stating \"there is no convincing scientific evidence that human release of carbon dioxide will, in the forseeable future, cause catastrophic heating of the Earth's atmosphere\". (OISM)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5226,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Was Greenland really green in the past? “CfA's Sallie Baliunas [...] refers to the medieval Viking sagas as examples of unusual warming around 1003 A.D. ‘The Vikings established colonies in Greenland at the beginning of the second millennium, but they died out several hundred years later when the climate turned colder,’ she notes.” (William Cromie)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.544,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Great Barrier Reef is in good shape the Great Barrier Reef is in fine fettle (Bob Carter)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.6249,
+      "decision_source": "hybrid_random_forest",
+      "category": "Biodiversity",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Antarctica is losing land ice at an accelerating rate, according to satellite measurements.  This is a huge deal for sea levels and the planet's climate. #ClimateChange #Antarctica",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4719,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Temp record is unreliable \"We found [U.S. weather] stations located next to the exhaust fans of air conditioning units, surrounded by asphalt parking lots and roads, on blistering-hot rooftops, and near sidewalks and buildings that absorb and radiate heat. We found 68 stations located at wastewater treatment plants, where the process of waste digestion causes temperatures to be higher than in surrounding areas. In fact, we found that 89 percent of the stations – nearly 9 of every 10 – fail to meet the National Weather Service’s own siting requirements that stations must be 30 meters (about 100 feet) or more away from an artificial heating or radiating/reflecting heat source.\" (Watts 2009)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5479,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Record high snow cover was set in winter 2008/2009",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.8268,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Antarctica is gaining ice \"[Ice] is expanding in much of Antarctica, contrary to the widespread public belief that global warming is melting the continental ice cap.\" (Greg Roberts, The Australian)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.518,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Satellite record is more reliable than thermometers \"The satellite data are the best data we have.\"Ted Cruz",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5751,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "CO2 limits will hurt the poor \"Legally mandated measures for reducing greenhouse gas emissions are likely to have significant adverse impacts on GDP growth of developing countries, including India.\" (Pradipto Ghosh, as quoted by Associated Press)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.4884,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "It's Urban Heat Island effect A paper by Ross McKitrick, an economics professor at the University of Guelph, and Patrick Michaels, an environmental studies professor at the University of Virginia, concludes that half of the global warming trend from 1980 to 2002 is caused by Urban Heat Island. (McKitrick & Michaels)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.675,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "It's internal variability When you look at the possibility of natural unforced variability, you see that can cause excursions that we've seen recently (Dr. John Christy)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5535,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Corals are resilient to bleaching \"Three recent articles give us reason to question the alarmists’ claims that coral reefs are in deep trouble due to the buildup of greenhouse gases.\" (World Climate Report)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.6009,
+      "decision_source": "hybrid_random_forest",
+      "category": "Biodiversity",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "It's clear that one of IPCC's missions was to establish the human impact on climate change. That's why their findings are so crucial! #ClimateAction",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4392,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Climate change is a real thing, not some conspiracy theory. The science is pretty clear on that.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4047,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "CO2 limits won't cool the planet \"[CO2 limits] will not make a difference for 1000 years. So this is a government which is proposing to put at risk our manufacturing industry, to penalise struggling families, to make a tough situation worse for millions of households right around Australia. And for what? To make not a scrap of difference to the environment any time in the next 1000 years.\" (Tony Abbott)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.4953,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Clear nights in fall and spring mean cooler temps! #science #weather",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.3913,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "It's Pacific Decadal Oscillation \"The Pacific Decadal Oscillation (PDO) is a temperature pattern in the Pacific Ocean that spends roughly 20-30 years in the cool phase or the warm phase. In 1905, PDO switched to a warm phase. In 1946, PDO switched to a cool phase. In 1977, PDO switched to a warm phase. In 1998, PDO showed a few cool years. Note that the cool phases seem to coincide with the periods of cooling (1946-1977) and the warm phases seem to coincide with periods of warming (1905-1946, 1977-1998).\" (The Reference Frame)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5169,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "CERN CLOUD experiment proved cosmic rays are causing global warming \"The new [CERN] findings point to cosmic rays and the sun — not human activities — as the dominant controller of climate on Earth...CERN, and the Danes, have in all likelihood found the path to the Holy Grail of climate science\" [Lawrence Solomon]",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5388,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Arctic icemelt is a natural cycle \"In 2007, the Northern Hemisphere reached a record low in ice coverage and the Northwest Passage was opened. At that point, we were told melting was occurring faster than expected. What you were not told was that the data that triggered this record is only available back to the late 1970s. We know the Northwest Passage had been open before.\" (Matt Rogers)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5456,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Don't be fooled by the distance, what's happening in the Arctic is important for everyone. It's connected to our planet's health. #ArcticChange #WeAreAllConnected",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4305,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "When forests disappear, the air becomes drier because the humidity they provide is gone. This can change wind patterns and affect weather.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4055,
+      "decision_source": "hybrid_random_forest",
+      "category": "Biodiversity",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "It's satellite microwave transmissions Global Warming history completely coincides with the history of artificial satellites and the use of microwave frequencies from outer space. Satellite antennas transmit UHF and higher microwaves frequencies all over the planet. Sending oscillating microwaves from an antenna inside a vacuum through an electromagnetic field through a dielectric material, such as water, creates radio frequency heating at the molecular level (source: Global Warming and Microwaves).",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.488,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Animals and plants can adapt [C]orals, trees, birds, mammals, and butterflies are adapting well to the routine reality of changing climate.\" (source: Hudson Institute)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5732,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Climate change isn't just some future problem. We need to act now!",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4095,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "We're heading into an ice age \"One day you'll wake up - or you won't wake up, rather - buried beneath nine stories of snow. It's all part of a dependable, predictable cycle, a natural cycle that returns like clockwork every 11,500 years. And since the last ice age ended almost exactly 11,500 years ago...\" (Ice Age Now)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.4862,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Climate scientists are in it for the money In truth, the overwhelming majority of climate-research funding comes from the federal government and left-wing foundations. And while the energy industry funds both sides of the climate debate, the government/foundation monies go only toward research that advances the warming regulatory agenda. With a clear public-policy outcome in mind, the government/foundation gravy train is a much greater threat to scientific integrity. -Henry Payne, National Review",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5032,
+      "decision_source": "hybrid_random_forest",
+      "category": "Energy",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Not all steps of the low‐carbon hydrogen value chain are available on the market today.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.3599,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "New research shows that the increase in carbon dioxide we're seeing isn't coming from the ocean, but from burning fossil fuels. #climatefacts #CO2",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4453,
+      "decision_source": "hybrid_random_forest",
+      "category": "Energy",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Clean Power Plan will reduce US emissions by at least 68% from 2012..",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4519,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Increased #soil #carbon sequestration slows #globalwarming.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4559,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "IPCC is alarmist \"Unquestionably, the U.N. Intergovernmental Panel on Climate Change (IPCC) was formed to build the scientific case for humanity being the primary cause of global warming. Such a goal is fundamentally unscientific, as it is hostile to alternative hypotheses for the causes of climate change.\" (Roy Spencer)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.5083,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Reliance on solar will make the United States dependent on China and other countries \"One of the biggest mistakes the West has done on green policies to cut CO2 emissions and trying to reduce dependence on oil and gas producing nations is that the transition to renewable energy puts the West at the mercy of China.\" (Forbes)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.4987,
+      "decision_source": "hybrid_random_forest",
+      "category": "Energy",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Himalayan glaciers are not shrinking \"...the [Himalayan] glaciers are not shrinking. A new report by a senior Indian glaciologist states that the glaciers remain frozen and quite intact, thank you.\"(Doug Hoffman)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.4956,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "Plant stomata show higher and more variable CO2 levels \"When stomata-derived CO2 (red) is compared to ice core-derived CO2 (blue), the stomata generally show much more variability in the atmospheric CO2 level and often show levels much higher than the ice cores.\" (David Middleton)",
+      "actual": "FAKE",
+      "predicted": "REAL",
+      "probability_real": 0.4925,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climafactskg-ccby"
+    },
+    {
+      "claim": "New data shows that sea levels are rising faster than predicted. #ClimateChange #SeaLevelRise",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4708,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "Did you know that there's still some uncertainty about the link between greenhouse gases and rising temperatures? It's a big topic in climate science.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4563,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "We need to promptly reduce the emissions of methane.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4796,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "It's not just about reducing emissions, it's about finding the right balance.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4699,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "New data suggests the Earth is warming slower than some climate models predicted.",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4348,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    },
+    {
+      "claim": "There's no natural explanation for the current warming trend. The 'fingerprint' of human activity is clear, and it's time we take action. #ClimateAction #GlobalWarming",
+      "actual": "REAL",
+      "predicted": "FAKE",
+      "probability_real": 0.4119,
+      "decision_source": "hybrid_random_forest",
+      "category": "Climate Change",
+      "source": "climatecheck-2026-consensus"
+    }
+  ],
+  "warning": "Este benchmark es válido solo para modelos entrenados con --exclude-claims-file apuntando a este mismo JSONL."
+}
