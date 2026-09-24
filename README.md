@@ -1,6 +1,6 @@
-# Climate Veritas
+# Climate Claim Analysis with Machine Learning
 
-Climate Veritas is an academic platform for detecting potentially misleading climate claims. It combines a machine-learning classifier with environmental entity recognition, ontology rules, and curated evidence retrieval to return an explainable `REAL` or `FAKE` signal.
+An academic system that analyzes climate-related claims using a hybrid machine-learning classifier, environmental entity recognition, ontology-based rules, and curated evidence retrieval. Each result is designed to be reviewed against the evidence behind it.
 
 > It is a research and educational tool. It does not replace scientific, journalistic, or professional fact-checking.
 
