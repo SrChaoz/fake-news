@@ -4,13 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+:root { color-scheme: light; --puce-blue: #004b87; --puce-blue-deep: #003a6b; --puce-cyan: #00a7d9; --puce-ink: #16283a; --puce-surface: #f5f8fb; --puce-border: #d9e3eb; }
 * { box-sizing: border-box; }
-body { margin: 0; min-height: 100vh; background: #0a0a0a; color: #e5e2e1; font-family: Inter, sans-serif; }
+body { margin: 0; min-height: 100vh; background: var(--puce-surface); color: var(--puce-ink); font-family: Inter, sans-serif; }
 button, textarea { font: inherit; }
-::selection { background: rgb(52 211 153 / 0.35); }
+::selection { background: rgb(0 167 217 / .25); }
 .mono, .eyebrow { font-family: 'Space Grotesk', monospace; }
 .eyebrow { font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
-.glass-panel { background: rgba(30, 30, 30, .62); border: 1px solid rgba(255,255,255,.1); border-top-color: rgba(255,255,255,.16); backdrop-filter: blur(18px); box-shadow: 0 20px 45px rgb(0 0 0 / .2); }
-.ambient-grid { background-image: linear-gradient(rgba(0,255,136,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,.035) 1px, transparent 1px); background-size: 52px 52px; }
-.orb { position: fixed; width: 34rem; height: 34rem; border-radius: 999px; filter: blur(120px); pointer-events: none; opacity: .16; }
+.glass-panel { background: #fff; border: 1px solid var(--puce-border); box-shadow: 0 1px 2px rgb(22 40 58 / .05); }

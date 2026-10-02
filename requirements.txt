@@ -1,6 +1,6 @@
 spacy>=3.7,<4.0
 rdflib>=7.0,<8.0
-scikit-learn>=1.4,<2.0
+scikit-learn==1.8.0
 nltk>=3.8,<4.0
 transformers>=4.40,<5.0
 torch>=2.2,<3.0

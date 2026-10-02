@@ -30,6 +30,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Local databases, editor settings and operating-system files
+.local/
 *.db
 *.sqlite*
 .DS_Store
